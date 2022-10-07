@@ -22,6 +22,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.farmacia.farmacia.model.Categoria;
 import com.farmacia.farmacia.repository.RepositoryCategoria;
+import com.farmacia.farmacia.repository.RepositoryProduto;
 
 @RestController
 @RequestMapping("/categoria")
@@ -30,6 +31,7 @@ public class CategoriaController {
 
 	@Autowired
 	private RepositoryCategoria repositoryCategoria;
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Categoria>> getAll(){
